@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qual cardápio de festa combina com você? · Panela Velha</title>
+<meta name="description" content="Responda 4 perguntas e veja um cardápio inicial de salgados e doces para vender, com quanto custa e por quanto vender cada um.">
+<meta property="og:title" content="Qual cardápio de festa combina com você?">
+<meta property="og:description" content="4 perguntas rápidas e um cardápio inicial com a conta pronta.">
+<meta property="og:image" content="../img/foto3.jpg">
+<meta name="theme-color" content="#161616">
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#161616;--ground:#FFF3E6;--paper:#fff;--accent:#B8401A;--solar:#FCA303;--soft:#5b4f46;--step:#F6E3CC}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ground);color:var(--ink);font:400 17px/1.5 'Poppins',system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100svh}
+img{display:block;max-width:100%;height:auto}
+h1,h2{font-family:'Fraunces',Georgia,serif;font-weight:700;letter-spacing:-.02em;line-height:1.05;margin:0}
+p{margin:0}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:560px;margin:0 auto}
+.top img{height:46px;width:auto}
+.bar{height:6px;background:var(--step);border-radius:99px;overflow:hidden;flex:1;margin-left:18px}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .35s}
+.step{display:none;padding:18px 0 40px}
+.step.on{display:block;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.step.on{animation:none}.bar i{transition:none}}
+.hero-img{border-radius:20px;overflow:hidden;margin:6px 0 22px;aspect-ratio:4/3}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+h1{font-size:clamp(34px,9vw,46px)}
+.lede{font-size:18px;margin-top:14px;color:var(--ink)}
+.small{font-size:15px;color:var(--soft);margin-top:12px}
+.q{font-size:clamp(28px,7.4vw,36px);margin:10px 0 22px}
+.opts{display:grid;gap:12px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--paper);border:0;border-radius:16px;padding:16px 18px;font:600 18px/1.3 'Poppins',sans-serif;color:var(--ink);cursor:pointer;transition:transform .12s,background .12s}
+.opt:hover{background:#fff8ef}.opt:active{transform:scale(.98)}
+.opt:focus-visible,.btn:focus-visible{outline:3px solid var(--solar);outline-offset:3px}
+.opt img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none}
+.opt .em{width:52px;height:52px;border-radius:50%;background:var(--step);display:grid;place-items:center;font-size:24px;flex:none}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:60px;margin-top:26px;background:var(--accent);color:#fff;border:0;border-radius:999px;font:700 19px/1 'Poppins',sans-serif;text-decoration:none;cursor:pointer;transition:transform .12s,background .12s}
+.btn:hover{background:#9c3412}.btn:active{transform:scale(.98)}
+.load{text-align:center;padding:80px 0}
+.load .spin{width:56px;height:56px;margin:0 auto 22px;border-radius:50%;border:6px solid var(--step);border-top-color:var(--accent);animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.res-h{font-size:clamp(30px,8vw,40px);margin:8px 0 10px}
+.menu{display:grid;gap:12px;margin:22px 0}
+.item{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;background:var(--paper);border-radius:18px;padding:12px}
+.item img{width:72px;height:72px;border-radius:50%;object-fit:cover}
+.item b{display:block;font-size:17px}
+.item span{display:block;font-size:15px;color:var(--soft)}
+.item em{font-style:normal;color:var(--accent);font-weight:700}
+.conta{background:var(--ink);color:var(--ground);border-radius:20px;padding:20px 22px;margin:8px 0 22px}
+.conta p{font-size:17px}
+.conta strong{color:var(--solar)}
+.conta .small{color:#d9cbbd}
+.dor{background:var(--step);border-radius:18px;padding:18px 20px;margin-bottom:22px}
+.dor h2{font-size:24px;margin-bottom:8px}
+.offer{background:var(--paper);border-radius:22px;padding:22px;margin-top:6px}
+.offer h2{font-size:28px}
+.covers{display:flex;gap:8px;margin:16px 0}
+.covers img{width:33%;border-radius:8px}
+.price{display:flex;align-items:baseline;gap:12px;margin-top:6px}
+.price s{color:var(--soft);font-size:18px}
+.price b{font-size:48px;letter-spacing:-.03em;line-height:1}
+.offer ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px;font-size:16px}
+.offer li:before{content:'✓';color:var(--accent);font-weight:700;margin-right:10px}
+.note{font-size:14px;color:var(--soft);margin-top:14px;text-align:center}
+.back{background:none;border:0;color:var(--soft);font:500 15px 'Poppins',sans-serif;margin-top:18px;cursor:pointer;padding:6px 0}
+</style>
+<!-- PIXEL DA META: quando houver o número, ele entra aqui (window.PV_PIXEL) -->
+</head>
+<body>
+<header class="top"><img src="../img/logo.png" alt="Panela Velha" width="360" height="226"><div class="bar" aria-hidden="true"><i id="prog"></i></div></header>
+<main class="wrap">
+
+<section class="step on" data-s="0">
+  <div class="hero-img"><img src="../img/foto2.jpg" alt="Tábua com coxinhas, kibes, empadinhas e bolinhas de queijo" width="880" height="1168"></div>
+  <h1>Qual cardápio de festa combina com você?</h1>
+  <p class="lede">Responda 4 perguntas rápidas e veja um cardápio inicial de salgados e doces para vender, com quanto custa e por quanto vender cada um.</p>
+  <button class="btn" type="button" data-go="1">Começar (leva 1 minuto)</button>
+  <p class="small">Grátis, sem cadastro. Os números vêm dos e-books da Panela Velha.</p>
+</section>
+
+<section class="step" data-s="1">
+  <h2 class="q">Você já vende salgado ou doce?</h2>
+  <div class="opts">
+    <button class="opt" type="button" data-k="fase" data-v="comecar"><span class="em">🌱</span>Ainda não, quero começar</button>
+    <button class="opt" type="button" data-k="fase" data-v="pouco"><span class="em">🛵</span>Vendo um pouco, quero vender mais</button>
+    <button class="opt" type="button" data-k="fase" data-v="ja"><span class="em">🏪</span>Já vendo, quero cardápio e preço certo</button>
+  </div>
+</section>
+
+<section class="step" data-s="2">
+  <h2 class="q">O que você mais quer vender?</h2>
+  <div class="opts">
+    <button class="opt" type="button" data-k="tipo" data-v="salgados"><img src="../img/r_coxinha.jpg" alt="">Salgados de festa</button>
+    <button class="opt" type="button" data-k="tipo" data-v="doces"><img src="../img/r_brigadeiro.jpg" alt="">Docinhos e potes</button>
+    <button class="opt" type="button" data-k="tipo" data-v="trufas"><img src="../img/r_tr_morango.jpg" alt="">Trufas e caixinhas</button>
+    <button class="opt" type="button" data-k="tipo" data-v="tudo"><img src="../img/r_coxinhas.jpg" alt="">Um pouco de tudo</button>
+  </div>
+</section>
+
+<section class="step" data-s="3">
+  <h2 class="q">Quantas encomendas você quer fazer por semana?</h2>
+  <div class="opts">
+    <button class="opt" type="button" data-k="ritmo" data-v="1"><span class="em">1</span>Uma, para começar devagar</button>
+    <button class="opt" type="button" data-k="ritmo" data-v="2"><span class="em">2</span>Duas ou três</button>
+    <button class="opt" type="button" data-k="ritmo" data-v="4"><span class="em">4+</span>Quatro ou mais</button>
+  </div>
+</section>
+
+<section class="step" data-s="4">
+  <h2 class="q">O que mais te trava hoje?</h2>
+  <div class="opts">
+    <button class="opt" type="button" data-k="dor" data-v="preco"><span class="em">💰</span>Não sei quanto cobrar</button>
+    <button class="opt" type="button" data-k="dor" data-v="receita"><span class="em">📋</span>Receita que dá certo e rende</button>
+    <button class="opt" type="button" data-k="dor" data-v="cliente"><span class="em">📣</span>Conseguir os primeiros clientes</button>
+    <button class="opt" type="button" data-k="dor" data-v="tempo"><span class="em">⏱️</span>Pouco tempo para cozinhar</button>
+  </div>
+</section>
+
+<section class="step load" data-s="5" aria-live="polite">
+  <div class="spin"></div>
+  <h2 class="q" style="margin:0">Montando o seu cardápio…</h2>
+</section>
+
+<section class="step" data-s="6" id="res"></section>
+</main>
+
+<script>
+const CHECKOUT='https://pay.kiwify.com.br/iPijLaR';
+// números tirados dos e-books (custo por unidade, preço sugerido, lucro por cento ou por lote)
+const ITENS={
+  salgados:[['r_coxinha','Coxinha de frango','R$ 0,61','R$ 1,20',59],['r_bolinha','Bolinha de queijo','R$ 0,75','R$ 1,20',45],['r_enroladinho','Enroladinho de salsicha','R$ 0,98','R$ 1,50',52.5],['r_kibe','Kibe frito','R$ 0,86','R$ 1,30',44]],
+  doces:[['r_brigadeiro','Brigadeiro tradicional','R$ 0,39','R$ 1,50',111],['r_beijinho','Beijinho','R$ 0,42','R$ 1,50',108],['r_pote','Bolo de pote','R$ 3,04','R$ 9,00',null],['r_copo','Copo da felicidade','R$ 5,40','R$ 12,00',null]],
+  trufas:[['r_tr_choco','Trufa de brigadeiro','R$ 1,69','R$ 5,00',null],['r_tr_morango','Trufa de morango com Ninho','R$ 1,93','R$ 5,50',null],['r_tr_marac','Trufa de maracujá','R$ 1,99','R$ 5,50',null]],
+};
+ITENS.tudo=[ITENS.salgados[0],ITENS.doces[0],ITENS.doces[2],ITENS.trufas[1]];
+const DOR={
+  preco:['Quanto cobrar já vem pronto','Cada receita traz o custo por unidade e o preço sugerido, e a planilha refaz a conta com o preço do seu mercado. Você para de chutar.'],
+  receita:['Receitas com ponto e rendimento','Passo a passo com o ponto certo, quanto cada receita rende e as massas-base que viram várias receitas do cardápio.'],
+  cliente:['Como conseguir os primeiros centos','Cada e-book fecha com ideias práticas de onde e como vender: degustação, cardápio no WhatsApp, datas que mais vendem.'],
+  tempo:['Bases que adiantam a semana','Você faz as massas-base de uma vez e monta várias receitas. Tem também como congelar os salgados para vender pronta-entrega.'],
+};
+const FASE={comecar:'para começar com o pé direito',pouco:'para vender mais sem chutar preço',ja:'para organizar o cardápio e o preço'};
+const r={};
+const steps=[...document.querySelectorAll('.step')], prog=document.getElementById('prog');
+function show(n){steps.forEach(s=>s.classList.toggle('on',+s.dataset.s===n));prog.style.width=Math.min(100,n/5*100)+'%';scrollTo({top:0,behavior:'smooth'});
+  const h=steps[n].querySelector('h1,h2,.btn,.opt');if(h){h.setAttribute('tabindex','-1');h.focus({preventScroll:true});}
+  if(window.fbq)fbq('trackCustom','QuizPasso',{passo:n});}
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>show(+b.dataset.go)));
+document.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{r[b.dataset.k]=b.dataset.v;const n=+b.closest('.step').dataset.s;if(n<4)show(n+1);else{show(5);setTimeout(result,1600);}}));
+function money(v){return 'R$ '+v.toFixed(2).replace('.',',');}
+function result(){
+  const lista=ITENS[r.tipo||'tudo'], ritmo=+(r.ritmo||1), sal=lista.find(x=>x[4]);
+  const conta = sal ? `<p>Exemplo do e-book: 1 cento de <strong>${sal[1].toLowerCase()}</strong> custa uns <strong>${money(parseFloat(sal[2].replace('R$ ','').replace(',','.'))*100)}</strong> para fazer e sai por <strong>${money(parseFloat(sal[3].replace('R$ ','').replace(',','.'))*100)}</strong>. Sobram cerca de <strong>${money(sal[4])}</strong> por cento.</p><p style="margin-top:10px">Com ${ritmo===1?'uma encomenda':ritmo===2?'duas ou três encomendas':'quatro ou mais encomendas'} de um cento por semana, isso dá uma ideia de quanto pode sobrar — com os preços do seu mercado, a planilha refaz a conta.</p>`
+    : `<p>Exemplo do e-book: uma trufa de morango com Ninho custa uns <strong>R$ 1,93</strong> e sai por <strong>R$ 5,50</strong>. Uma caixa com 6 sai por <strong>R$ 30</strong>.</p>`;
+  const d=DOR[r.dor||'preco'];
+  document.getElementById('res').innerHTML=`
+    <h2 class="res-h">Seu cardápio inicial ${FASE[r.fase]||''}</h2>
+    <p class="lede" style="margin-top:0">Estas receitas estão entre as que mais saem em festa e têm boa sobra por unidade:</p>
+    <div class="menu">${lista.map(i=>`<div class="item"><img src="../img/${i[0]}.jpg" alt="${i[1]}" width="440" height="440"><div><b>${i[1]}</b><span>custa ${i[2]} · vende a <em>${i[3]}</em></span></div></div>`).join('')}</div>
+    <div class="conta">${conta}<p class="small">É uma conta de exemplo, não uma promessa: o resultado depende da sua região, do seu preço e do seu trabalho.</p></div>
+    <div class="dor"><h2>${d[0]}</h2><p>${d[1]}</p></div>
+    <div class="offer">
+      <h2>Tudo isso está no Pack Completo</h2>
+      <div class="covers"><img src="../img/pg-doc-capa.jpg" alt="Capa 25 Doces"><img src="../img/pg-sal-capa.jpg" alt="Capa Salgados para Festas"><img src="../img/pg-tru-capa.jpg" alt="Capa Trufas"></div>
+      <div class="price"><s>R$ 59,60</s><b>R$ 37</b></div>
+      <ul><li>66 receitas: 25 salgados, 25 doces, 5 trufas e 11 bases</li><li>Custo, rendimento e preço de venda em cada uma</li><li>Planilha que calcula o seu lucro</li><li>Download na hora, sem criar conta</li><li>7 dias de garantia</li></ul>
+      <a class="btn" id="comprar" href="${CHECKOUT}">Quero o Pack por R$ 37</a>
+      <p class="note">Pix ou cartão. Pagamento seguro pela Kiwify.</p>
+    </div>
+    <p class="small" style="text-align:center;margin-top:18px"><a href="../" style="color:inherit">Ver tudo o que vem no Pack</a></p>`;
+  show(6);
+  document.getElementById('comprar').addEventListener('click',()=>{if(window.fbq)fbq('track','InitiateCheckout',{value:37,currency:'BRL'});});
+}
+</script>
+</body>
+</html>
