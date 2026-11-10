@@ -52,7 +52,7 @@ h1{font-size:clamp(34px,9vw,46px)}
 .item img{width:72px;height:72px;border-radius:50%;object-fit:cover}
 .item b{display:block;font-size:17px}
 .item span{display:block;font-size:15px;color:var(--soft)}
-.item em{font-style:normal;color:var(--accent);font-weight:700}
+.item em{font-style:normal;color:var(--accent);font-weight:700;white-space:nowrap}
 .conta{background:var(--ink);color:var(--ground);border-radius:20px;padding:20px 22px;margin:8px 0 22px}
 .conta p{font-size:17px}
 .conta strong{color:var(--solar)}
@@ -157,13 +157,13 @@ document.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{r[b
 function money(v){return 'R$ '+v.toFixed(2).replace('.',',');}
 function result(){
   const lista=ITENS[r.tipo||'tudo'], ritmo=+(r.ritmo||1), sal=lista.find(x=>x[4]);
-  const conta = sal ? `<p>Exemplo do e-book: 1 cento de <strong>${sal[1].toLowerCase()}</strong> custa uns <strong>${money(parseFloat(sal[2].replace('R$ ','').replace(',','.'))*100)}</strong> para fazer e sai por <strong>${money(parseFloat(sal[3].replace('R$ ','').replace(',','.'))*100)}</strong>. Sobram cerca de <strong>${money(sal[4])}</strong> por cento.</p><p style="margin-top:10px">Com ${ritmo===1?'uma encomenda':ritmo===2?'duas ou três encomendas':'quatro ou mais encomendas'} de um cento por semana, isso dá uma ideia de quanto pode sobrar — com os preços do seu mercado, a planilha refaz a conta.</p>`
+  const conta = sal ? `<p>Exemplo do e-book: 1 cento de <strong>${sal[1].toLowerCase()}</strong> custa uns <strong>${money(parseFloat(sal[2].replace('R$ ','').replace(',','.'))*100)}</strong> para fazer e sai por <strong>${money(parseFloat(sal[3].replace('R$ ','').replace(',','.'))*100)}</strong>. Sobram cerca de <strong>${money(sal[4])}</strong> por cento.</p><p style="margin-top:10px">Para ${ritmo===1?'uma encomenda':ritmo===2?'duas ou três encomendas':'quatro ou mais encomendas'} por semana, a planilha do Pack mostra quanto sobra com os preços do seu mercado.</p>`
     : `<p>Exemplo do e-book: uma trufa de morango com Ninho custa uns <strong>R$ 1,93</strong> e sai por <strong>R$ 5,50</strong>. Uma caixa com 6 sai por <strong>R$ 30</strong>.</p>`;
   const d=DOR[r.dor||'preco'];
   document.getElementById('res').innerHTML=`
     <h2 class="res-h">Seu cardápio inicial ${FASE[r.fase]||''}</h2>
     <p class="lede" style="margin-top:0">Estas receitas estão entre as que mais saem em festa e têm boa sobra por unidade:</p>
-    <div class="menu">${lista.map(i=>`<div class="item"><img src="../img/${i[0]}.jpg" alt="${i[1]}" width="440" height="440"><div><b>${i[1]}</b><span>custa ${i[2]} · vende a <em>${i[3]}</em></span></div></div>`).join('')}</div>
+    <div class="menu">${lista.map(i=>`<div class="item"><img src="../img/${i[0]}.jpg" alt="${i[1]}" width="440" height="440"><div><b>${i[1]}</b><span>custa ${i[2]}<br>vende a <em>${i[3]}</em></span></div></div>`).join('')}</div>
     <div class="conta">${conta}<p class="small">É uma conta de exemplo, não uma promessa: o resultado depende da sua região, do seu preço e do seu trabalho.</p></div>
     <div class="dor"><h2>${d[0]}</h2><p>${d[1]}</p></div>
     <div class="offer">
